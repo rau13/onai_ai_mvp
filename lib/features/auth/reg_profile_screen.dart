@@ -128,6 +128,7 @@ class _RegProfileScreenState extends State<RegProfileScreen> {
                   controller: birthDateController,
                   style: theme.textTheme.bodyLarge,
                   decoration: InputDecoration(
+                      hintText: 'date.month.year',
                       labelText: 'Date of Birth',
                       labelStyle: theme.textTheme.bodySmall,
                       filled: true,
