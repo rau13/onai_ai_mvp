@@ -9,6 +9,7 @@ import 'package:onay_ai_mvp/features/auth/send_code_screen.dart';
 import 'package:onay_ai_mvp/features/auth/welcome_screen.dart';
 import 'package:onay_ai_mvp/features/bookkeeping/bookkeeping_screen.dart';
 import 'package:onay_ai_mvp/features/cfo/cfo_screen.dart';
+import 'package:onay_ai_mvp/features/chat/chat_screen.dart';
 import 'package:onay_ai_mvp/features/main/main_screen.dart';
 import 'package:onay_ai_mvp/features/profile/profile_screen.dart';
 import 'package:onay_ai_mvp/features/select_your_bank/select_your_bank_screen.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const WelcomeScreen(),
+      child: const ChatScreen(),
     );
   }
 }

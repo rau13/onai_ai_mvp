@@ -21,7 +21,7 @@ class _SendCodeScreenState extends State<SendCodeScreen> {
 
 
   TextEditingController codeController = TextEditingController();
-  FlutterSecureStorage fss = FlutterSecureStorage();
+  FlutterSecureStorage fss = const FlutterSecureStorage();
 
   @override
   void initState() {
@@ -79,7 +79,7 @@ class _SendCodeScreenState extends State<SendCodeScreen> {
                   labelStyle: theme.textTheme.bodySmall,
 
                   filled: true,
-                  fillColor: Color(0XFF2D2E3A),
+                  fillColor: const Color(0XFF2D2E3A),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12.0)
                   )
@@ -94,7 +94,7 @@ class _SendCodeScreenState extends State<SendCodeScreen> {
                 child: TextButton(
 
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(codeController.text.isEmpty ? Colors.grey : Color(0xff5F6FFF)),
+                        backgroundColor: MaterialStateProperty.all<Color>(codeController.text.isEmpty ? Colors.grey : const Color(0xff5F6FFF)),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(32.0),
@@ -102,7 +102,7 @@ class _SendCodeScreenState extends State<SendCodeScreen> {
                         )
                     ),
                     onPressed: codeController.text.isEmpty ? null : (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegProfileScreen()));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const RegProfileScreen()));
                     },
                     child: Center(
                       child: Text('Sign in', style: theme.textTheme.bodyLarge,),

@@ -11,10 +11,7 @@ import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_
 
 // ignore_for_file: must_be_immutable
 class RegProfileScreen extends StatefulWidget {
-  RegProfileScreen({Key? key})
-      : super(
-          key: key,
-        );
+  const RegProfileScreen({super.key});
 
   @override
   State<RegProfileScreen> createState() => _RegProfileScreenState();
@@ -28,7 +25,7 @@ class _RegProfileScreenState extends State<RegProfileScreen> {
 
   TextEditingController birthDateController = TextEditingController();
 
-  FlutterSecureStorage fss = FlutterSecureStorage();
+  FlutterSecureStorage fss = const FlutterSecureStorage();
 
   String genderValue = "";
 
@@ -84,7 +81,7 @@ class _RegProfileScreenState extends State<RegProfileScreen> {
                   onTap: (){
                     Navigator.of(context).pop();
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back_ios,
                     color: Colors.white,
                   ),
@@ -109,7 +106,7 @@ class _RegProfileScreenState extends State<RegProfileScreen> {
                       labelText: 'Name',
                       labelStyle: theme.textTheme.bodySmall,
                       filled: true,
-                      fillColor: Color(0XFF2D2E3A),
+                      fillColor: const Color(0XFF2D2E3A),
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0))),
                 ),
                 SizedBox(height: 20.h),
@@ -120,7 +117,7 @@ class _RegProfileScreenState extends State<RegProfileScreen> {
                       labelText: 'Surname',
                       labelStyle: theme.textTheme.bodySmall,
                       filled: true,
-                      fillColor: Color(0XFF2D2E3A),
+                      fillColor: const Color(0XFF2D2E3A),
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0))),
                 ),
                 SizedBox(height: 20.h),
@@ -132,7 +129,7 @@ class _RegProfileScreenState extends State<RegProfileScreen> {
                       labelText: 'Date of Birth',
                       labelStyle: theme.textTheme.bodySmall,
                       filled: true,
-                      fillColor: Color(0XFF2D2E3A),
+                      fillColor: const Color(0XFF2D2E3A),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.0))),
                 ),
@@ -148,7 +145,7 @@ class _RegProfileScreenState extends State<RegProfileScreen> {
             height: 56.h,
             child: TextButton(
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(_areFieldsFilled() ? Color(0xff5F6FFF) : Colors.grey),
+                    backgroundColor: MaterialStateProperty.all<Color>(_areFieldsFilled() ? const Color(0xff5F6FFF) : Colors.grey),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32.0),
                     ))),

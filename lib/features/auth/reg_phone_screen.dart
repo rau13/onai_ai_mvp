@@ -20,7 +20,7 @@ class _RegPhoneScreenState extends State<RegPhoneScreen> {
   final TextEditingController controller = TextEditingController();
   String initialCountry = 'KZ';
   PhoneNumber number = PhoneNumber(isoCode: 'KZ');
-  FlutterSecureStorage fss = FlutterSecureStorage();
+  FlutterSecureStorage fss = const FlutterSecureStorage();
 
   @override
   void initState() {
@@ -75,7 +75,7 @@ class _RegPhoneScreenState extends State<RegPhoneScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 8.h),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0XFF2D2E3A),
+                  color: const Color(0XFF2D2E3A),
                 ),
                 child: Stack(
                   children: [
@@ -86,12 +86,12 @@ class _RegPhoneScreenState extends State<RegPhoneScreen> {
                       onInputValidated: (bool value) {
                         print(value);
                       },
-                      selectorConfig: SelectorConfig(
+                      selectorConfig: const SelectorConfig(
                         selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
                         useBottomSheetSafeArea: true,
                       ),
                       inputDecoration: InputDecoration(
-                          contentPadding: EdgeInsets.only(bottom: 10, left: 0),
+                          contentPadding: const EdgeInsets.only(bottom: 10, left: 0),
                           border: InputBorder.none,
                           labelText: 'Phone number',
                           labelStyle: theme.textTheme.bodySmall
@@ -99,7 +99,7 @@ class _RegPhoneScreenState extends State<RegPhoneScreen> {
                       textStyle: theme.textTheme.bodyLarge,
                       ignoreBlank: false,
                       autoValidateMode: AutovalidateMode.disabled,
-                      selectorTextStyle: TextStyle(color: Colors.white),
+                      selectorTextStyle: const TextStyle(color: Colors.white),
                       initialValue: number,
                       textFieldController: controller,
                       formatInput: true,
@@ -125,7 +125,7 @@ class _RegPhoneScreenState extends State<RegPhoneScreen> {
                 child: TextButton(
 
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>( controller.text.isEmpty ? Colors.grey : Color(0xff5F6FFF)),
+                        backgroundColor: MaterialStateProperty.all<Color>( controller.text.isEmpty ? Colors.grey : const Color(0xff5F6FFF)),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(32.0),
